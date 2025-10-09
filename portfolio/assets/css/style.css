@@ -1,0 +1,75 @@
+/* ====== Estilos base ====== */
+:root{
+  --bg:#0b0d12;
+  --panel:#111827;
+  --muted:#9aa4b2;
+  --text:#e5e7eb;
+  --brand:#60a5fa;
+  --brand-2:#22d3ee;
+  --ok:#34d399;
+  --warn:#f59e0b;
+  --radius:16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,#0b0d12,#0b0d12 40%,#0f172a);color:var(--text)}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{opacity:.9}
+.container{max-width:1100px;margin:0 auto;padding:48px 20px}
+.subtitle{color:var(--muted);margin-top:-6px}
+
+/* ====== Cabecera y navegación ====== */
+.site-header{position:sticky;top:0;background:rgba(11,13,18,.75);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1100px;margin:0 auto;padding:12px 20px}
+.brand{font-weight:800;color:#fff;letter-spacing:.3px}
+.nav-menu{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.nav-menu a{color:#c7d2fe;padding:8px 12px;border-radius:10px}
+.nav-menu a:hover{background:rgba(99,102,241,.1)}
+.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:22px}
+
+/* ====== Hero ====== */
+.hero{display:grid;grid-template-columns:1.3fr .9fr;gap:26px;align-items:center}
+.hero .subtitle{font-weight:600;color:#9fb3c8}
+.hero .cta{display:flex;gap:12px;margin-top:14px}
+.btn{display:inline-block;padding:10px 16px;border-radius:12px;font-weight:600;border:1px solid rgba(255,255,255,.1)}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#00131a;border:none;box-shadow:var(--shadow)}
+.btn.ghost{color:var(--text);background:rgba(255,255,255,.04)}
+.btn.small{padding:8px 12px;font-size:.95rem}
+.hero-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
+.quickfacts{margin:0;padding-left:18px;color:#cdd6e1}
+
+/* ====== Grids y tarjetas ====== */
+.grid.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
+.card h3{margin-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:8px 0 0;padding:0}
+.tags li{background:#0b1220;border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;color:#b9c3d1}
+
+.featured .project{display:grid;grid-template-columns:160px 1fr;gap:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:12px}
+.project .bullets{margin:0;padding-left:18px;color:#cdd6e1}
+.project img{background:#0b1220;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+
+/* ====== Proyectos (detalle) ====== */
+.project-detail .meta{color:#9fb3c8;margin-top:-8px}
+.project-detail .cover{margin:14px 0;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0b1220}
+.bullets, ul{line-height:1.6}
+
+/* ====== Contacto ====== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.msg{display:grid;gap:10px}
+.msg input,.msg textarea{background:#0b1220;color:#e5e7eb;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:10px}
+.help{color:var(--muted);font-size:.9rem}
+
+/* ====== Footer ====== */
+.site-footer{border-top:1px solid rgba(255,255,255,.06);text-align:center;padding:28px 0;color:#9fb3c8}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr}
+  .grid.three{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .nav-menu{display:none}
+  .nav-menu.open{display:flex;flex-direction:column;gap:8px;position:absolute;top:56px;right:10px;background:#0b1220;padding:12px 10px;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+}
