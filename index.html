@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aron Quiliche | Portafolio Profesional</title>
+  <meta name="description" content="Portafolio de Aron Alexander Quiliche López — Analista de Datos y Optimización de Sistemas. Proyectos en optimización, análisis espacial y BI." />
+  <meta name="author" content="Aron Alexander Quiliche López" />
+  <meta property="og:title" content="Aron Quiliche | Portafolio Profesional" />
+  <meta property="og:description" content="Analista de Datos • Optimización • BI • QGIS" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.jpg" />
+  <meta property="og:url" content="https://<tu-usuario>.github.io/Portfolio-Aron-Quiliche-Lopez/" />
+  <style>
+    :root{
+      --bg:#0b0b10;--panel:#12121a;--card:#171726;--txt:#e9e9f0;--muted:#a7a7c2;--brand:#8a5cf6;--brand-2:#7ad7f0;--accent:#35d0a5;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,var(--bg),#0f111a);color:var(--txt)}
+    a{color:inherit}
+    /* nav */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,11,16,.75);backdrop-filter:blur(10px);border-bottom:1px solid #23233b}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.3px}
+    .brand-badge{width:28px;height:28px;border-radius:8px;background:radial-gradient(100% 100% at 0% 0%,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .menu{display:flex;gap:22px}
+    .menu a{padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none}
+    .menu a:hover,.menu a:focus{outline:none;background:#23233b;color:var(--txt)}
+    /* hero */
+    .hero{padding:80px 0 40px;border-bottom:1px solid #23233b;background:
+      radial-gradient(1200px 400px at 10% -10%,rgba(138,92,246,.15),transparent 60%),
+      radial-gradient(1000px 500px at 90% 0%,rgba(122,215,240,.09),transparent 60%)}
+    .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+    h1{font-size:clamp(28px,4.2vw,42px);line-height:1.1;margin:0 0 12px}
+    .lead{font-size:clamp(16px,1.7vw,18px);color:var(--muted);max-width:60ch}
+    .badge{display:inline-flex;gap:.5rem;align-items:center;padding:8px 12px;border-radius:999px;background:#1d1d2e;border:1px solid #2a2a49;color:#cfcff6;font-size:13px}
+    .btns{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;border:1px solid #2a2a49;background:#1b1b2b;color:#ececff}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#6d8bff);border-color:transparent}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .card{background:var(--card);border:1px solid #242443;border-radius:16px;box-shadow:var(--shadow)}
+    .avatar{display:block;width:100%;border-radius:14px;border:1px solid #2a2a49}
+    /* sections */
+    section{padding:64px 0}
+    .section-title{font-size:26px;margin:0 0 6px}
+    .section-desc{color:var(--muted);margin:0 0 28px}
+    /* projects */
+    .projects{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .proj{grid-column:span 12;padding:16px}
+    .proj h3{margin:0 0 4px}
+    .proj .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
+    .proj .body{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .proj img{width:100%;height:auto;border-radius:12px;border:1px solid #2a2a49}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 2px}
+    .tag{font-size:12px;padding:4px 8px;border:1px solid #2a2a49;border-radius:999px;color:#c8c8f0;background:#1a1a28}
+    .proj .links{display:flex;gap:10px;margin-top:10px}
+    /* contact/footer */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{margin:0;padding-left:18px}
+    footer{padding:26px 0 50px;color:#9aa0b3;border-top:1px solid #23233b;text-align:center}
+    /* responsive */
+    @media (max-width:900px){
+      .hero .grid{grid-template-columns:1fr}
+      .projects .proj .body{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <div class="brand"><span class="brand-badge" aria-hidden="true"></span> Aron Quiliche</div>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#inicio">Inicio</a>
+        <a role="menuitem" href="#sobre-mi">Sobre mí</a>
+        <a role="menuitem" href="#proyectos">Proyectos</a>
+        <a role="menuitem" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <span class="badge" aria-label="etiquetas">Analítica de Datos · Optimización · BI · QGIS</span>
+          <h1>Portafolio Profesional</h1>
+          <p class="lead">
+            Soy <strong>Ingeniero Civil Industrial</strong> y <strong>Magíster en Ciencias de la Ingeniería</strong> (Logística y Gestión de Operaciones).
+            Construyo soluciones de <em>data analytics</em>, <em>visualización</em> y <em>optimización</em> para la toma de decisiones.
+          </p>
+          <div class="btns">
+            <a class="btn primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn" href="AronQuiliche_CV_2025.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            <a class="btn" href="https://www.linkedin.com/in/aron-alexander-quiliche-lopez-ab2310204/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div>
+          <img class="avatar" src="assets/preview.jpg" alt="Imagen de portada del portafolio de Aron Quiliche" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-desc">Analista de datos con experiencia en integración y transformación de datos, modelamiento matemático y visualización para negocios y sector público. Manejo avanzado de <strong>Python</strong>, <strong>R</strong>, <strong>SQL</strong> y <strong>Power BI</strong>; nivel intermedio en <strong>QGIS</strong> y optimizadores (<strong>Gurobi</strong>, <strong>CPLEX</strong>). Interesado en proyectos que combinen <em>data science</em> y <em>operational research</em> para mejorar eficiencia, resiliencia y sostenibilidad.</p>
+      <ul class="tags" aria-label="Tecnologías clave">
+        <li class="tag">Python</li>
+        <li class="tag">R</li>
+        <li class="tag">SQL</li>
+        <li class="tag">Power BI</li>
+        <li class="tag">QGIS</li>
+        <li class="tag">Gurobi</li>
+        <li class="tag">CPLEX</li>
+        <li class="tag">LaTeX</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="proyectos" aria-labelledby="title-proyectos">
+    <div class="container">
+      <h2 id="title-proyectos" class="section-title">Proyectos seleccionados</h2>
+      <p class="section-desc">Tres casos representativos: optimización de redes, análisis espacial con educación y BI corporativo.</p>
+
+      <div class="projects">
+        <!-- PROYECTO 1 -->
+        <article class="proj card" aria-labelledby="p1-title">
+          <h3 id="p1-title">Modelo binivel de localización y fortificación de hubs post‑disrupción</h3>
+          <div class="meta">Optimización · Gurobi · NetworkX · Visualización geoespacial</div>
+          <div class="body">
+            <div>
+              <p>Formulación <strong>binivel</strong> con decisiones del líder (localización y fortificación) y del seguidor (interdicción) para maximizar cobertura de demanda en una red <em>hub-and-spoke</em> bajo disrupciones. Se evaluaron escenarios y se obtuvieron redes robustas, con cobertura del <strong>66,05&nbsp;%</strong> en el caso mostrado.</p>
+              <ul class="list">
+                <li><strong>Objetivo:</strong> Maximizar cobertura post‑disrupción incorporando fortificación preventiva.</li>
+                <li><strong>Tecnologías:</strong> Python (Gurobi, NumPy, Pandas, Matplotlib, NetworkX), GeoPandas.</li>
+                <li><strong>Código fuente:</strong> disponible bajo solicitud.</li>
+                <li><strong>Aprendizajes:</strong> Modelado binivel, tuning de MIP, visualización de redes y análisis de sensibilidad.</li>
+              </ul>
+              <div class="links">
+                <a class="btn" href="#contacto">Contactar para código</a>
+              </div>
+            </div>
+            <div>
+              <img src="assets/hubs_resultado.png" alt="Red resultante con hubs localizados, fortificados e interdicciones" />
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="proj card" aria-labelledby="p2-title">
+          <h3 id="p2-title">Vegetación (NDVI) y Asistencia Escolar – Gran Santiago</h3>
+          <div class="meta">Análisis espacial · QGIS · GeoPandas · Estadística</div>
+          <div class="body">
+            <div>
+              <p>Estudio de asociación entre <strong>NDVI</strong> (índice de vegetación) en entornos escolares y la asistencia anual de estudiantes. Integración de datos MINEDUC (2013–2018) con capas satelitales y exploración descriptiva/espacial.</p>
+              <ul class="list">
+                <li><strong>Objetivo:</strong> Evaluar correlaciones y patrones territoriales por dependencia escolar.</li>
+                <li><strong>Tecnologías:</strong> Python/R, QGIS, GeoPandas, ggplot2/dplyr.</li>
+                <li><strong>Código fuente:</strong> disponible bajo solicitud.</li>
+                <li><strong>Aprendizajes:</strong> Limpieza de datos, <em>geocoding</em>, joins espaciales, mapas coropléticos y buenas prácticas de visualización.</li>
+              </ul>
+            </div>
+            <div>
+              <img src="assets/colegios_rm.png" alt="Mapa de puntos de colegios por dependencia en Gran Santiago" />
+              <img style="margin-top:12px" src="assets/ndvi_gs.png" alt="Mapa NDVI del Gran Santiago" />
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3 -->
+        <article class="proj card" aria-labelledby="p3-title">
+          <h3 id="p3-title">Panel Udemy Business – Cencosud Tech</h3>
+          <div class="meta">Business Intelligence · Power BI · Toma de decisiones</div>
+          <div class="body">
+            <div>
+              <p>Desarrollo de dashboard ejecutivo para seguimiento de horas de formación, activación y uso de licencias, y NPS. Se estandarizó el flujo de datos y se optimizó la gobernanza del reporte, habilitando decisiones oportunas a nivel de gerencia.</p>
+              <ul class="list">
+                <li><strong>Objetivo:</strong> Monitorear métricas clave de formación para mejorar adopción y eficiencia.</li>
+                <li><strong>Tecnologías:</strong> Power BI, Excel (ETL), conectores a SQL/APIs.</li>
+                <li><strong>Entregables:</strong> panel principal, vista por gerencia y navegación por segmentos.</li>
+                <li><strong>Aprendizajes:</strong> storytelling con datos, DAX, diseño accesible y limpio.</li>
+              </ul>
+            </div>
+            <div>
+              <img src="assets/udemy_nav.png" alt="Interfaz de navegación del panel Udemy" />
+              <img style="margin-top:12px" src="assets/udemy_dashboard.png" alt="Dashboard principal de Udemy Business" />
+              <img style="margin-top:12px" src="assets/udemy_tabla.png" alt="Tabla de desempeño por gerencia" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" aria-labelledby="title-contacto">
+    <div class="container">
+      <h2 id="title-contacto" class="section-title">Contacto</h2>
+      <p class="section-desc">¿Te gustaría conversar sobre alguno de estos proyectos o colaborar en uno nuevo?</p>
+      <div class="contact-grid">
+        <div class="card" style="padding:16px">
+          <h3>Información</h3>
+          <ul class="list">
+            <li><strong>Nombre:</strong> Aron Alexander Quiliche López</li>
+            <li><strong>Ubicación:</strong> Santiago, Chile</li>
+            <li><strong>Email:</strong> <a href="mailto:aron.quilichelopez@gmail.com">aron.quilichelopez@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aron-alexander-quiliche-lopez-ab2310204/">Perfil</a></li>
+          </ul>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Descargables</h3>
+          <ul class="list">
+            <li><a href="AronQuiliche_CV_2025.pdf" target="_blank" rel="noopener">Currículum (PDF)</a></li>
+          </ul>
+          <p style="color:var(--muted)">*El código de proyectos se comparte bajo solicitud por confidencialidad/ordenamiento del repositorio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Aron Quiliche · Hecho con HTML/CSS puro y ❤️ · Accesible y responsivo</div>
+  </footer>
+
+  <script>
+    // año actual para footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
