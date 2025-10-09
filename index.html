@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Profesional - Aron Quiliche Lopez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Poppins', sans-serif; background-color: #0b0c10; color: #fff; line-height: 1.6; scroll-behavior: smooth;}
+    header {background: linear-gradient(135deg, #1f2833, #0b0c10); padding: 120px 20px; text-align: center;}
+    header h1 {font-size: 2.8em; font-weight: 600; color: #66fcf1;}
+    header p {font-size: 1.1em; margin-top: 15px; color: #c5c6c7;}
+    nav {position: sticky; top: 0; background: #1f2833; padding: 15px 0; text-align: center; z-index: 999;}
+    nav a {color: #fff; margin: 0 20px; text-decoration: none; font-weight: 500; transition: color 0.3s;}
+    nav a:hover {color: #66fcf1;}
+    section {padding: 70px 10%; max-width: 1100px; margin: auto;}
+    h2 {color: #66fcf1; margin-bottom: 30px; border-left: 5px solid #45a29e; padding-left: 10px;}
+    .project {margin-bottom: 50px; background-color: #1f2833; border-radius: 10px; padding: 25px; box-shadow: 0 0 10px rgba(102, 252, 241, 0.15);}
+    .project h3 {color: #45a29e;}
+    .project p {color: #c5c6c7; margin: 10px 0;}
+    .project-img {width: 100%; border-radius: 8px; margin-top: 15px; transition: transform 0.3s ease;}
+    .project-img:hover {transform: scale(1.02);}
+    footer {background-color: #1f2833; text-align: center; padding: 40px; color: #c5c6c7;}
+    footer a {color: #66fcf1; text-decoration: none;}
+    footer a:hover {text-decoration: underline;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aron Alexander Quiliche Lopez</h1>
+    <p>Ingeniero Civil Industrial | Magíster en Ciencias de la Ingeniería | Analista de Datos | Optimización de Sistemas</p>
+  </header>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy analista de datos e ingeniero con especialización en optimización de sistemas y análisis cuantitativo.
+    Combino la analítica avanzada con la visión estratégica para diseñar soluciones sostenibles y basadas en evidencia.
+    Manejo avanzado de <b>Python, R, SQL, Power BI</b> y experiencia en modelación matemática y visualización geoespacial
+    con <b>Gurobi, CPLEX y QGIS</b>.</p>
+    <p>Mi objetivo es seguir desarrollando proyectos que integren <b>datos, optimización y sostenibilidad</b>, contribuyendo al desarrollo científico y empresarial del país.</p>
+  </section>
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="project">
+      <h3>1️⃣ Localización y Fortificación de Hubs Post-Disrupción</h3>
+      <p><b>Descripción:</b> Modelo de optimización binivel para decidir la ubicación y fortificación de hubs aéreos ante disrupciones.</p>
+      <p><b>Objetivo:</b> Maximizar la cobertura de red post-evento considerando decisiones del líder y del atacante.</p>
+      <p><b>Tecnologías:</b> Python, Gurobi, NetworkX, Matplotlib.</p>
+      <p><b>Reflexión:</b> Este proyecto consolidó mis competencias en optimización combinatoria y análisis de resiliencia de redes.</p>
+      <img src="hubs_resultado.png" alt="Red de hubs fortificados" class="project-img">
+    </div>
+    <div class="project">
+      <h3>2️⃣ Asociación entre Vegetación Escolar y Asistencia Estudiantil</h3>
+      <p><b>Descripción:</b> Estudio transversal que analiza la relación entre el verdor urbano (NDVI) y la asistencia de estudiantes de enseñanza básica en Santiago.</p>
+      <p><b>Objetivo:</b> Evaluar el impacto ambiental en la asistencia escolar para promover entornos más saludables.</p>
+      <p><b>Tecnologías:</b> R, QGIS, Python (GeoPandas), análisis estadístico y espacial.</p>
+      <p><b>Reflexión:</b> Fortalecí mis habilidades en análisis geoespacial y uso de datos abiertos en educación.</p>
+      <img src="colegios_rm.png" alt="Colegios Santiago" class="project-img">
+      <img src="ndvi_gs.png" alt="Mapa NDVI Gran Santiago" class="project-img">
+    </div>
+    <div class="project">
+      <h3>3️⃣ Panel de Control – Udemy Business (Cencosud S.A.)</h3>
+      <p><b>Descripción:</b> Desarrollo de paneles interactivos para analizar el uso de la plataforma Udemy Business a nivel regional.</p>
+      <p><b>Objetivo:</b> Optimizar la gestión de licencias y medir la efectividad de los programas de formación.</p>
+      <p><b>Tecnologías:</b> Power BI, SQL, Excel, integración con fuentes en la nube.</p>
+      <p><b>Reflexión:</b> Integré análisis de datos con visualización estratégica y comunicación efectiva con stakeholders.</p>
+      <img src="udemy_nav.png" alt="Panel de navegación Udemy" class="project-img">
+      <img src="udemy_dashboard.png" alt="Dashboard principal Udemy" class="project-img">
+      <img src="udemy_tabla.png" alt="Resumen de métricas Udemy" class="project-img">
+    </div>
+  </section>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Santiago, Chile</p>
+    <p>📧 <a href="mailto:aron.quilichelopez@gmail.com">aron.quilichelopez@gmail.com</a></p>
+    <p>💼 <a href="https://www.linkedin.com/in/aron-alexander-quiliche-lopez-ab2310204" target="_blank">LinkedIn</a></p>
+  </section>
+  <footer><p>© 2025 Aron Quiliche Lopez | Portafolio Profesional</p></footer>
+</body>
+</html>
